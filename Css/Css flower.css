@@ -1,0 +1,637 @@
+*{
+    margin: 10;
+    padding: 0;
+    box-sizing:border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border:none;
+    outline:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior:smooth;
+    scroll-padding-top:6rem;
+    overflow-x:hidden;
+    /* height: 2000px; */
+}
+/* section{
+    background-color: red;
+    padding:2rem 9%;
+} */
+header{
+    /* background-color: red; */
+    /* position:fixed; */
+    top:0px; left:0px; right:0px;
+    /* background-color: #fff; */
+    padding:2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index:1000;
+    /* box-shadow: 5px 5px rgb(0, 0, 0, 0.1); */
+    box-shadow: 0.5rem 1rem rgb(0, 0, 0, 0.1);
+}
+header .logo{
+    /* background-color: red; */
+    font-size: 3rem;
+    color:#333;
+    font-weight: bolder;
+}
+header .logo span{
+    color:hotpink;
+}
+header .navbar a{
+    font-size: 2rem;
+    /* background-color: red; */
+    padding:0 1.5rem;
+    color:#666; 
+}
+header .navbar a:hover{
+    color:hotpink;
+}
+header .icons a{
+    font-size: 2.5rem;
+    color:#333;
+    /* background-color: red; */
+    margin-left: 1.5rem;
+}
+header .icons a:hover{
+    color:hotpink;
+}
+header #toggler{
+    display:none;
+}
+header .fa-bars{
+    font-size: 3rem;
+    color:#333;
+    /* background-color: red; */
+    padding:.5rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor:pointer;
+    border:1px solid rgba(0,0, 0, .1);
+    margin-left: 20x;
+    display: none;
+}
+
+section{
+    /* background-color:red; */
+    padding:2rem 9%;
+    /* margin:2rem 9%;; */
+}
+.home{
+    /* background-color: yellow; */
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    background:url(../Images/home-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.home .content{
+    /* background-color: red; */
+    max-width:50rem;
+}
+.home .content h3{
+    font-size: 6rem;
+    color:#333;
+}
+.home .content span{
+    font-size: 3.5rem;
+    color:hotpink;
+    /* background-color: yellow; */
+    padding: 1rem 0;
+    line-height:1.5;
+}
+.home .content p{
+    /* background-color: purple; */
+    font-size: 1.5rem;
+    /* color:#999; */
+    padding:1rem 0;
+    line-height: 1.5;
+}
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background-color: #333;
+    color: #fff;
+    padding: .9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+.btn:hover{
+    background-color: hotpink;
+}
+.about .heading{
+    /* color:purple; */
+    text-align: center;
+    font-size: 4rem;
+    /* color:#333; */
+    /* background-color: antiquewhite; */
+    padding:1rem;
+    margin:2rem 0;
+    background:rgba(255, 51, 153, 0.05);
+}
+.about .heading span{
+    color:hotpink;
+}
+.about .row{
+    display: flex;
+    align-items: center;
+    gap:2em;
+    flex-wrap: wrap;
+    padding:2rem 0;
+    padding-bottom: 3rem;
+}
+.about .row .video-container{
+    /* display: none; */
+    flex:1 1 40rem; 
+    position: relative;
+
+}
+.about .row .video-container video{
+    /* display: none; */
+    width:100%;
+    border:1.5rem solid #fff;
+    border-radius: .5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    height: 100%;
+    object-fit: cover;
+}
+.about .row .video-container h3{
+    /* background-color: orange; */
+    position: absolute;
+    top:50%;
+    transform:translateY(-50%);
+    font-size: 3rem;
+    background: #fff;
+    width:100%;
+    padding:1rem 2rem;
+    text-align: center;
+    mix-blend-mode:screen;
+}
+.about .row .content{
+    flex: 1 1 40rem;
+}
+.about .row .content h3{
+    font-size: 3rem;
+    color:#333;
+}
+.about .row .content p{
+    font-size: 1.5rem;
+    color:#999;
+    padding: .5rem 0;
+    padding-top:1rem;
+    line-height: 1.5;
+}
+.about .content .btn2{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background-color: #333;
+    color: #fff;
+    padding: .9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+.about .content .btn2:hover{
+    background-color: hotpink;
+}
+
+.icons-container{
+    /* background-color: red; */
+    background-color: #eee;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    padding-top:5rem;
+    padding-bottom: 5rem;
+}
+.icons-container .icons{
+    /* background-color: purple; */
+    background-color: #fff;
+    border:2px solid rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    flex:1 1 25rem ;
+}
+.icons-container .icons img{
+    /* background-color: black; */
+    height: 5rem;
+    margin-right: 2rem;
+}
+.icons-container .icons h3{
+    /* color:orange; */
+    color:#333;
+    /* background-color: black; */
+    padding-bottom: .5rem;
+    font-size: 1.5rem;
+}
+.icons-container .icons span{
+    /* color: green; */
+    color:#555;
+    /* background-color: red; */
+    font-size: 1.3rem; 
+}
+.products .heading{
+    /* color:purple; */
+    text-align: center;
+    font-size: 4rem;
+    color:#333;
+    /* background-color: antiquewhite; */
+    padding:1rem;
+    margin:2rem 0;
+    background:rgba(255, 51, 153, 0.05);
+}
+.products .heading span{
+    color:hotpink;
+}
+.products .box-container{
+    /* background-color: orange; */
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+}
+.products .box-container .box{
+    /* background-color: black; */
+    flex:1 1 30rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    border: 1rem solid rgba(0, 0, 0, 0.1);
+    position: relative;
+
+}
+.products .box-container .box .discount{
+    /* background-color: yellow; */
+    position:absolute;
+    top:1rem;
+    left:1rem;
+    padding: .7rem 1rem;
+    font-size: 2rem;
+    color:hotpink;
+    background-color: rgba(255, 51, 153, 0.05);
+    z-index: 1;
+    border-radius: 0.5rem;
+}
+.products .box-container .box .image{
+    /* background-color: red; */
+    position: relative;
+    text-align: center;
+    padding-top: 2rem;
+    overflow: hidden ;
+}
+.products .box-container .box .image img{
+    height:25rem;
+}
+/* .products .box-container .box .image img:hover{
+    transform: scale(1.1);
+} */
+.products .box-container .box:hover .image img{
+    transform: scale(1.1);
+}
+.products .box-container .box .image .icons{
+    background-color:hotpink;
+    position: absolute;
+    bottom:-7rem;
+    left:0px;
+    right:0px;
+    display: flex;
+}
+.products .box-container .box:hover .image .icons{
+    bottom: 0;
+}
+.products .box-container .box .image .icons a{
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    width:50%;
+    /* background-color: hotpink; */
+    color:#fff;
+}
+.products .box-container .box .image .icons .cart-btn{
+    border-left: .1rem solid #fff7;
+    border-right: .1rem Solid #fff7;
+    width:100%;
+}
+.products .box-container .box .image .icons a:hover{
+    background-color: #333;
+}
+.products .box-container .box .content{
+    padding: 2rem;
+    text-align: center;
+}
+.products .box-container .box .content h3{
+    /* color: blue; */
+    font-size: 2.5rem;
+    color:#333;
+}
+.products .box-container .box .content .price{
+    font-size: 2.5rem;
+    color:hotpink;
+    font-weight: bolder;
+    padding-top: 1rem;
+}
+.products .box-container .box .content .price span{
+    font-size: 1.5rem;
+    color:#999;
+    font-weight: lighter;
+    text-decoration: line-through;
+}
+
+.review h1{
+    /* color:purple; */
+    text-align: center;
+    font-size: 4rem;
+    /* color:#333; */
+    /* background-color: antiquewhite; */
+    padding:1rem;
+    margin:2rem 0;
+    background:rgba(255, 51, 153, 0.05);
+}
+.review h1 span{
+    color: hotpink;
+}
+.about .heading span{
+    color:hotpink;
+}
+.review .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+
+}
+.review .box-container .box{
+    flex:1 1 30rem;
+    /* border: 20px solid brown; */
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.1);
+    border-radius: .5rem;
+    padding:3rem 2rem;
+    position: relative;
+    border:1rem solid rgb(0, 0, 0, 0.1);
+}
+.review .box-container .box .fa-quote-right{
+    position: absolute;
+    bottom:3rem;
+    right:3rem;
+    font-size: 6rem;
+    color:#eee;
+}
+.review .box-container .box .user{
+    display: flex;
+    align-items: center;
+    padding-top: 2rem;
+}
+.review .box-container .box .stars i{
+    /* color:blue; */
+    font-size: 2rem;
+}
+.review .box-container .box p{
+    /* background-color: orange; */
+    /* color:black; */
+    color:#999;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    padding-top:2rem;
+}
+.review .box-container .box .user img{
+    height:6rem ;
+    width:6rem;
+    border-radius: 50%;
+    object-fit:cover;
+    margin-right: 1rem;
+}
+.review .box-container .box .user h3{
+    font-size: 2rem;
+    color:#333;
+}
+.review .box-container .box .user span{
+    font-size: 1.5rem;
+    color:#999;
+}
+
+.contact  h1{
+    /* color:purple; */
+    text-align: center;
+    font-size: 4rem;
+    /* color:#333; */
+    /* background-color: antiquewhite; */
+    padding:1rem;
+    margin:2rem 0;
+    background:rgba(255, 51, 153, 0.05);
+}
+.contact  span{
+    color: hotpink;
+}
+.contact .row{
+    display: flex;
+    flex-wrap:wrap-reverse;
+    gap:1.5rem;
+    align-items: center;
+}
+.contact .row form{
+    flex: 1 1 40rem;
+    padding: 2rem 2.5rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.1);
+    border:1rem solid rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: .5rem;
+}
+.contact .row .image{
+    flex: 1 1 40rem;
+}
+.contact .row .image img{
+    width:100%;
+}
+.contact .row form .box{
+    /* color: yellow; */
+    /* background-color: purple; */
+    padding: 1rem;
+    font-size: 1.7rem;
+    color:#333;
+    text-transform: none;
+    border:.1rem solid rgba(0, 0, 0, 0.1);
+    border-radius: .5rem;
+    margin: .7rem 0rem;
+    width: 100%;
+}
+.contact .row form .box:focus{
+    border-color: hotpink;
+}
+.contact .row form textarea{
+    height: 15rem;
+    resize:none;
+}
+.footer .box-container{
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap:1.5rem;
+}
+.footer .box-container .box{
+    flex:1 1 25rem;
+}
+.footer .box-container .box h3{
+    /* background-color: black; */
+    color:#333;
+    font-size: 2.5rem;
+    padding: 1rem 0;
+}
+.footer .box-container .box a{
+    display: block;
+    color:#666;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+.footer .box-container .box a:hover{
+    color:hotpink;
+    text-decoration: underline; 
+}
+.footer .box-container .box img{
+    background-color: orange;
+    margin-top: 1rem;
+}
+.footer .credit{
+    text-align: center;
+    padding:1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 2.5rem;
+    font-size: 2rem;
+    color:#333;
+    border-top: .1rem solid rgba(0, 0, 0, 0.1);
+}
+.footer .credit span{
+    color:hotpink;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:816px){
+    html{
+        font-size: 55%;
+    }
+    header{
+        /* background-color: red; */
+        padding:2rem;
+    }
+    section{
+        padding: 2rem;
+        /* margin: 2rem; */
+    }
+    .home{
+        background-position: left;
+    }
+}
+@media(max-width:720px){
+    header .fa-bars{
+        display: block;
+    }
+    header .navbar{
+        background-color: #eee;
+        position: absolute;
+        top:70px;
+        left:0px;
+        right: 0px;
+        border-top:.1rem solid rgba(0,0, 0, .1);
+        clip-path:polygon(0 0,100% 0,100% 0,0 0);
+    }
+    header #toggler:checked ~ .navbar{
+        clip-path:polygon(0 0,100% 0, 100% 100%,0% 100%);
+    }
+    header .navbar a{
+        background-color: #fff;
+        margin:1.5rem;
+        padding:1.5rem;
+        border:1px solid rgba(0,0, 0, .1);
+        display: block;
+    }
+    /* html{
+        font-size: 50%;
+    } */
+    .home .content h3{
+        font-size: 5rem;
+    }
+    .home .content span{
+        font-size:2.5rem;
+    }
+    .about .heading{
+        font-size: 3rem;
+    }
+    .icons-container .icons h3{
+        /* color:orange; */
+        color:#333;
+        /* background-color: black; */
+        padding-bottom: .5rem;
+        font-size: 2rem;
+    }
+    .icons-container .icons span{
+        /* color: green; */
+        color:#555;
+        /* background-color: red; */
+        font-size: 1.3rem; 
+    }
+    .footer .box-container{
+        flex-wrap: wrap;
+    }
+}
